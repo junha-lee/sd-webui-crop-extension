@@ -7,7 +7,7 @@ def on_ui_tab_called():
     with gr.Blocks() as transparent_interface:
         with gr.Row():
             with gr.Tabs():
-                with gr.TabItem("crop_head"):
+                with gr.TabItem("CropHead"):
                     image_upload_input = gr.Image(label="Upload Image", source="upload",type="pil")
                     threshold_input = gr.Slider(minimum=0, maximum=255, value=100, label="Threshold")
                     button = gr.Button(label="Convert")
