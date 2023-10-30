@@ -4,6 +4,7 @@ from PIL import Image
 import numpy as np
 from imgutils.detect import detect_halfbody, detect_heads
 
+
 def on_ui_tab_called():
     with gr.Blocks() as transparent_interface:
         with gr.Row():
@@ -19,7 +20,6 @@ def on_ui_tab_called():
                         The black color (with some threshold) will remain, others will be transparent
                         """
                         # first convert to RGB
-                        # warn : APNG transparent channels should be converted as white
                         if image.mode == "RGBA":
                             # convert transparent pixels to white
                             white_image = Image.new("RGB", image.size, (255, 255, 255))
