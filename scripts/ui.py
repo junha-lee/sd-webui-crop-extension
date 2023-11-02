@@ -15,10 +15,6 @@ def on_ui_tab_called():
                     image_upload_output = gr.Image(label="Output Image",type="numpy")
                     
                     def convert_image(image:Image.Image):
-                        """
-                        Converts the image to apng
-                        The black color (with some threshold) will remain, others will be transparent
-                        """
                         # first convert to RGB
                         if image.mode == "RGBA":
                             # convert transparent pixels to white
